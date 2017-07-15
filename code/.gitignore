@@ -1,0 +1,11 @@
+node_modules
+.npmrc
+npm-debug.log
+.log
+results*
+dev.debug.log
+/.settings/
+/.project
+.vscode/
+~*
+jsconfig.json
