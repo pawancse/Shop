@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes');
-var user = require('./routes/preSigninRoute');
+var user = require('./routes/preSigninRoute')
 
 var app = express();
 
