@@ -7,7 +7,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes');
-var user = require('./routes/preSigninRoute')
+var user = require('./routes/users');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://proxap:9708677704@ds161042.mlab.com:61042/atlas'); // connect to our database
 
 var app = express();
 
