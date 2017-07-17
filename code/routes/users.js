@@ -8,7 +8,7 @@ router.use(function timeLog(req, res, next) {
 })
 
 router.get('/', function (req, res) {
-    res.json({ 'type': 'This is getUsers Method' });
+	res.json({ 'type': 'This is getUsers Method' });
 });
 router.route('/account')
 
@@ -17,11 +17,18 @@ router.route('/account')
 
 		var user = new User();		// create a new instance of the User model
 		user.name = req.body.name;  // set the users name (comes from the request)
-
+		user.mobile = req.body.mobile;
+		user.dob = req.body.dob;
+		user.emailId = req.body.emailId;
+		user.addedDate = req.body.addedDate;
+		user.updateDate = req.body.updateDate;
+		user.panCard = req.body.panCard;
+		user.userType = req.body.userType;
+		user.tinNumber = req.body.tinNumber
 		user.save(function (err) {
 			if (err)
 				res.send(err);
-
+			else
 			res.json({ message: 'User created!' });
 		});
 

@@ -5,11 +5,10 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://proxap:9708677704@ds161042.mlab.com:61042/atlas');
 var routes = require('./routes');
 var user = require('./routes/users');
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://proxap:9708677704@ds161042.mlab.com:61042/atlas'); // connect to our database
 
 var app = express();
 
